@@ -1,17 +1,14 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
     setlocale(0, "");
-    double tC;
-    cout << "Введите температуру в градусах Цельсия: ";
-    cin >> tC;
-
-    double tF = (9.0 / 5.0) * tC + 32.0;
-    double tK = tC + 273.0;
-
-    cout << "Фаренгейт: " << tF << endl;
-    cout << "Кельвин: " << tK << endl;
-
+    double a, b, c;
+    cout << "Введите три числа: ";
+    cin >> a >> b >> c;
+    double ar = (a + b + c) / 3.0;
+    double gm = pow(a * b * c, 1.0/3.0);
+    (ar < 10) ? cout << ar << " " << gm : cout << (a < c ? a : c);
     return 0;
 }

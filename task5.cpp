@@ -1,15 +1,16 @@
-#define _USE_MATH_DEFINES
+
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
+
 int main() {
     setlocale(0, "");
-    double area;
-    cout << "Введите площадь круга S = ";
-    cin >> area;
-    double radius = sqrt(area / M_PI);
-    double length = 2.0 * M_PI * radius;
-    cout << "Радиус = " << radius << endl;
-    cout << "Длина окружности = " << length << endl;
+    double x, y;
+    cin >> x >> y;
+    double a = x * log(x) + y / (cos(x) - x / 3.0);
+    double b = sin(sqrt(x + 1.0)) - sin(sqrt(x - 1.0));
+    cout << showpos << fixed << setprecision(5) << a << endl;
+    cout << scientific << b << endl;
     return 0;
 }
